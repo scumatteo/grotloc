@@ -1,1 +1,1 @@
-python grotloc.py --cfg cfg_files/sample_configuration.cfg --input kitti_00.txt --output .
+python grotloc.py --cfg cfg_files/sample_configuration.cfg --input D:/datasets/KITTI_dataset/KITTI_odometry/poses/10.txt --output .
