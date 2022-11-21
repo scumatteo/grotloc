@@ -17,7 +17,7 @@ __authors__ = ["Nicolas Soncini"]
 __license__ = "GPLv3"
 __version__ = "0.0.1"
 
-from grotloc.utils.pysimplegui_utils.gui_widget import GUIWidget
+from utils.pysimplegui_utils.gui_widget import GUIWidget
 from matplotlib import pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 import PySimpleGUI as sg

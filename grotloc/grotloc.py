@@ -25,12 +25,12 @@ import importlib
 import logging
 import sys
 
-from grotloc.data_structures.MultiGrispy import MultiGrispy
-from grotloc.utils.argparse_utils import dir_path, file_path
-from grotloc.utils.candidates_utils import write_candidate_pairs
-from grotloc.utils.cfgreader_utils import dot_split_sections
-from grotloc.utils.pysimplegui_utils.gui_controller import GUIController
-from grotloc.utils.pysimplegui_utils.loop_candidate_widget import \
+from data_structures.MultiGrispy import MultiGrispy
+from utils.argparse_utils import dir_path, file_path
+from utils.candidates_utils import write_candidate_pairs
+from utils.cfgreader_utils import dot_split_sections
+from utils.pysimplegui_utils.gui_controller import GUIController
+from utils.pysimplegui_utils.loop_candidate_widget import \
     LoopCandidateWidget
 
 
@@ -88,6 +88,7 @@ def load_poses(input_file, cfg):
 
     pgt_reader = pgt_class()
     pgt = pgt_reader.read_pgt(input_file)
+    print(pgt)
 
     logger.info('Read PGT with headers: %s', pgt.columns)
     return pgt
@@ -179,6 +180,8 @@ def grotloc(argv):
     if not distance_fns:
         logger.critical('No distance functions were read, failing execution')
         exit(1)
+
+    print(data_points)
 
     # Build Data Structure for neighbor query (DS)
     data_structure = build_data_structure(
